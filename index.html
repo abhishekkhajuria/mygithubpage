@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<title>POTUS2016</title>
+
+<style>
+
+body {
+	background-image: url("https://i.imgur.com/e7TVgrm.jpg");
+    background-repeat: no-repeat;
+     background-position: top;
+     background-attachment: fixed;
+     background-size:cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+#chartdiv { 
+   width        : 100%;
+    height      : 500px;
+    background-color: #161616, 0.5;  
+}
+
+.amcharts-graph-g2 .amcharts-graph-stroke {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 500%;
+  stroke-dasharray: 0 \0/;    /* fixes IE prob */
+  stroke-dashoffset: 0 \0/;   /* fixes IE prob */
+  -webkit-animation: am-draw 40s;
+  animation: am-draw 40s;
+}
+
+.amcharts-graph-g1 .amcharts-graph-stroke {
+  stroke-dasharray: 3px 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: am-moving-dashes 1s linear infinite;
+  animation: am-moving-dashes 1s linear infinite;
+}
+
+@-webkit-keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+@keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+
+
+.lastBullet {
+  -webkit-animation: am-pulsating 1s ease-out infinite;
+  animation: am-pulsating 1s ease-out infinite;
+}
+@-webkit-keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+@keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+
+
+
+.amcharts-graph-g3 {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 500%;
+  stroke-dasharray: 0 \0/;    /* fixes IE prob */
+  stroke-dashoffset: 0 \0/;   /* fixes IE prob */
+  -webkit-animation: am-draw 40s;
+  animation: am-draw 40s;
+}
+@-webkit-keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+@keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+                                
+                                
+
+
+div.sansserif {
+    font-family: 'Lato', sans-serif;
+
+}
+p.sansserif {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    
+}
+div.candidates{
+	background-color: rgba(255, 0, 0, 0.4);
+    background-repeat: no-repeat;  
+}
+div.info{
+    background-color: rgba(0, 0, 255, 0.4);
+    background-repeat: no-repeat;  
+}
+h1.sansserif {
+	color: 	white;
+    font-family: 'Lato', sans-serif;
+    font-size: 250%;
+    font-weight: 100;
+}
+h2.sansserif {
+    color:  white;
+    font-family: 'Lato', sans-serif;
+    font-size: 250%;
+    font-weight: 100;
+    text-align: center;
+}
+h4.sansserif {
+	color: 	white;
+    font-family: 'Lato', sans-serif;
+    font-size: 150%;
+    font-weight: 400;
+}
+.centeral {
+	margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+div.mid{
+    margin-right: 250px;
+    margin-left: 250px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+div.mid2{
+    
+    margin: 0;
+    padding: 0;
+}
+div.midbtm{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:  white;
+    font-family: 'Lato', sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+}
+div.btm{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:  white;
+    font-family: 'Lato', sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+}
+div.candidatetxt{
+    background-color:inherit;
+    padding: 10px;
+}
+div.infotxt{
+    background-color:inherit;
+    padding: 10px;
+}
+div.main{
+    background-image: url("https://i.imgur.com/yQV9cZv.jpg");
+    background-repeat: no-repeat;
+     background-position: top;
+     background-attachment: fixed;
+     background-size:cover;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    
+    margin: 20px 20px 20px 20px;
+    
+    
+}
+</style>
+</head>
+
+<body>
+
+    <div style="padding-top: 160px;padding-bottom: 160px">
+        <div class="centeral" style="width: 60%;">
+            <h1 class="sansserif" style="text-align: center;font-weight: lighter;">Project POTUS 2016</h1>
+            <h4 class="sansserif" style="text-align: center;font-weight: lighter;"><b>___________________________________</b></h4>
+        </div>
+    </div>
+    <br>
+    <div class="candidates">
+        <div class="candidatetxt">
+            <img src="https://www.vectoropenstock.com/media/users/3/124758/raw/ccd84e1f0278c5282c9b9d7d041ee6cb-clinton-and-trump-cartoon-illustration.jpg" style="width:33%;float: right;">
+            <h2 class="sansserif">The Nominees</h2><br><br>
+            <p class="sansserif">After the much contested primaries in the first half of this year, We are finally left with these candidates from each of the major parties: Donald Trump (Republican) and Hillary Clinton (Democrat).
+            </p><br><br><br><br>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="infotxt">
+            <img src="https://i.imgur.com/D4osJID.png" style="width:33%;float: left;">
+            <h2 class="sansserif">Insights, As they happen</h2><br><br>
+            <p class="sansserif">We monitor Twitter for mentions of the Democratic and Republican Presidential Nominees, analyze the sentiment of the content and display it graphically. Both the data and tweets update in real time so you can track the conversation as it happens!
+            </p><br><br><br>
+        </div>
+    </div>
+
+    <div class="main">
+        <br><br><br><br><br><br><br><br><br><br><br>
+        
+       <div class="mid">
+            <h1 class="sansserif" style="text-align: center;color: white;font-weight: lighter;">So what does twitter say?</h1>
+       </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+<script src="https://www.amcharts.com/lib/3/amcharts.js?x"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js?x"></script>
+<script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+<div id="chartdiv"></div>                                              
+
+
+    </div>
+
+<script type="text/javascript">
+    var chartData = [
+    {
+        "date": "01-10-2016",
+        "zero": 0,
+        "Trump": -0.1,
+        "Clinton": -0.4
+    },
+    {
+        "date": "02-10-2016",
+
+        "Trump": -0.29,
+        "Clinton": -0.36
+    },
+    {
+        "date": "03-10-2016",
+    
+        "Trump": -0.27,
+        "Clinton": -0.48
+    },
+    {
+        "date": "04-10-2016",
+     
+        "Trump": -0.24,
+        "Clinton": -0.22
+    },
+    {
+        "date": "05-10-2016",
+      
+        "Trump": -0.02,
+        "Clinton": -0.37
+    },
+    {
+        "date": "06-10-2016",
+      
+        "Trump": -0.12,
+        "Clinton": -0.54
+    },
+    {
+        "date": "07-10-2016",
+      
+        "Trump": -0.39,
+        "Clinton": -0.42
+    },
+    {
+        "date": "08-10-2016",
+      
+        "Trump": -0.27,
+        "Clinton": 0.12
+    },
+    {
+        "date": "09-10-2016",
+       
+        "Trump": -0.25,
+        "Clinton": -0.28
+    },
+    {
+        "date": "10-10-2016",
+       
+        "Trump": -0.19,
+        "Clinton": -0.42
+    },
+    {
+        "date": "11-10-2016",
+        
+        "Trump": 0.1,
+        "Clinton": -0.47
+    },
+    {
+        "date": "12-10-2016",
+       
+        "Trump": -0.09,
+        "Clinton": -0.39
+    },
+    {
+        "date": "13-10-2016",
+      
+        "Trump": -0.29,
+        "Clinton": -0.33
+    },
+    {
+        "date": "14-10-2016",
+       
+        "Trump": -0.17,
+        "Clinton": -0.21
+    },
+    {
+        "date": "15-10-2016",
+       
+        "Trump": -0.16,
+        "Clinton": -0.49
+    },
+    {
+        "date": "16-10-2016",
+        
+        "Trump": 0.07,
+        "Clinton": -0.42
+    },
+    {
+        "date": "17-10-2016",
+       
+        "Trump": -0.13,
+        "Clinton": -0.13
+    },
+    {
+        "date": "18-10-2016",
+       
+        "Trump": 0.26,
+        "Clinton": 0.25
+    },
+    {
+        "date": "19-10-2016",
+       
+        "Trump": -0.31,
+        "Clinton": -0.38
+    },
+    {
+        "date": "20-10-2016",
+       
+        "Trump": -0.18,
+        "Clinton": -0.18
+    },
+    {
+        "date": "21-10-2016",
+        
+        "Trump": -0.09,
+        "Clinton": 0.45
+    },
+    {
+        "date": "22-10-2016",
+       
+        "Trump": -0.19,
+        "Clinton": -0.06
+    },
+    {
+        "date": "23-10-2016",
+       
+        "Trump": -0.02,
+        "Clinton": -0.02
+    },
+    {
+        "date": "24-10-2016",
+       
+        "Trump": -0.02,
+        "Clinton": -0.38
+    },
+    {
+        "date": "25-10-2016",
+       
+        "Trump": -0.07,
+        "Clinton": -0.4
+    },
+    {
+        "date": "26-10-2016",
+        
+        "Trump": -0.11,
+        "Clinton": 0.33
+    },
+    {
+        "date": "27-10-2016",
+       
+        "Trump": 0.08,
+        "Clinton": -0.37
+    },
+    {
+        "date": "28-10-2016",
+       
+        "Trump": 0.05,
+        "Clinton": -0.46
+    },
+    {
+        "date": "29-10-2016",
+       
+        "Trump": 0.3,
+        "Clinton": -0.38
+    },
+    {
+        "date": "30-10-2016",
+       
+        "Trump": 0.32,
+        "Clinton": -0.37
+    },
+    {
+        "date": "31-10-2016",
+        
+        "Trump": 0.04,
+        "Clinton": -0.46
+    },
+    {
+        "date": "01-11-2016",
+       
+        "Trump": 0.1,
+        "Clinton": -0.38
+    },
+    {
+        "date": "02-11-2016",
+       
+        "Trump": -0.13,
+        "Clinton": -0.48
+    },
+    {
+        "date": "03-11-2016",
+       
+        "Trump": 0.72,
+        "Clinton": -0.01
+    },
+    {
+        "date": "04-11-2016",
+       "zero": 0,
+        "Trump": 0.61,
+        "Clinton": -0.02,
+        
+    },
+    {
+        "date": "05-11-2016",
+       "zero": 0,
+        "Trump": 0.63,
+        "Clinton": 0.02,
+        "bulletClass": "lastBullet"
+
+    }
+
+    
+];
+var chart = AmCharts.makeChart("chartdiv", {
+  type: "serial",
+  theme: "dark",
+  dataDateFormat: "DD-MM-YYYY",
+  dataProvider: chartData,
+
+  addClassNames: true,
+  startDuration: 1,
+  color: "#FFFFFF",
+  marginLeft: 0,
+
+  categoryField: "date",
+  categoryAxis: {
+    parseDates: true,
+    minPeriod: "DD",
+    autoGridCount: false,
+    gridCount: 50,
+    gridAlpha: 0.1,
+    gridColor: "#FFFFFF",
+    axisColor: "#555555",
+    dateFormats: [{
+        period: 'DD',
+        format: 'DD'
+    }, {
+        period: 'WW',
+        format: 'MMM DD'
+    }, {
+        period: 'MM',
+        format: 'MMM'
+    }, {
+        period: 'YYYY',
+        format: 'YYYY'
+    }]
+  },
+
+  valueAxes: [{
+    id: "a3",
+    title: "score",
+    position: "left",
+    gridAlpha: 0,
+    axisAlpha: 0,
+    inside: true,
+  }],
+  graphs: [{
+    id: "g2",
+    valueField: "Trump",
+    classNameField: "bulletClass",
+    title: "Trump",
+    type: "line",
+    valueAxis: "a3",
+    lineColor: "#ff0000",
+    lineThickness: 1,
+    legendValueText: "[[value]]",
+    descriptionField: "townName",
+    bullet: "round",
+    bulletBorderColor: "#ff0000",
+    bulletBorderAlpha: 1,
+    bulletBorderThickness: 1,
+    labelText: "[[townName2]]",
+    labelPosition: "right",
+    balloonText: "[[value]]",
+    showBalloon: true,
+    animationPlayed: true,
+  },{
+    id: "g3",
+    title: "Clinton",
+    valueField: "Clinton",
+    classNameField: "bulletClass",
+    type: "line",
+    valueAxis: "a3",
+    lineColor: "#0000ff",
+    balloonText: "[[value]]",
+    lineThickness: 1,
+    legendValueText: "[[value]]",
+    bullet: "round",
+    bulletBorderColor: "#0000ff",
+    bulletBorderThickness: 1,
+    bulletBorderAlpha: 1,
+    dashLengthField: "dashLength",
+    animationPlayed: true
+  },{
+    id: "g1",
+    title: "zero",
+    valueField: "zero",
+    classNameField: "bulletClass",
+    type: "line",
+    valueAxis: "a3",
+    lineColor: "#ffffff",
+    lineThickness: 1,
+    dashLengthField: "dashLength",
+    animationPlayed: true
+  }],
+
+  chartCursor: {
+    zoomable: false,
+    categoryBalloonDateFormat: "DD",
+    cursorAlpha: 0,
+    valueBalloonsEnabled: false
+  },
+  legend: {
+    bulletType: "round",
+    equalWidths: false,
+    valueWidth: 120,
+    useGraphSettings: true,
+    color: "#FFFFFF"
+  }
+});
+</script>
+ <div class="mid2">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        
+        <div class="midbtm">
+           <h2 style="color: white;font-weight: lighter;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A word of caution:</h2>
+            <ul>
+              <li>The sample size may be too small to provide insights into the collective opinion.</li><br>
+              <li>The opinion of the Twitterati may not reflect the actual popularity or the election result.</li><br>
+              <li>The sentiment algorithm may not be reliably accurate.</li>
+            </ul>
+
+        </div>
+        <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="btm">
+            By:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Abhishek Khajuria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Facebook: 
+             <a href="https://www.facebook.com/1.618abhi"> <i class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             Linked in: 
+             <a href="https://in.linkedin.com/in/abhishek-khajuria-561495131"> <i class="fa fa-linkedin"></i> </a>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             Email: 1.618abhi@gmail.com 
+        </div>
+ </div>
+
+</body>
+
+</html>
+
