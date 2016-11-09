@@ -32,8 +32,8 @@ body {
   stroke-dasharray: 500%;
   stroke-dasharray: 0 \0/;    /* fixes IE prob */
   stroke-dashoffset: 0 \0/;   /* fixes IE prob */
-  -webkit-animation: am-draw 40s;
-  animation: am-draw 40s;
+  -webkit-animation: am-draw 60s;
+  animation: am-draw 60s;
 }
 
 .amcharts-graph-g1 .amcharts-graph-stroke {
@@ -89,8 +89,8 @@ body {
   stroke-dasharray: 500%;
   stroke-dasharray: 0 \0/;    /* fixes IE prob */
   stroke-dashoffset: 0 \0/;   /* fixes IE prob */
-  -webkit-animation: am-draw 40s;
-  animation: am-draw 40s;
+  -webkit-animation: am-draw 60s;
+  animation: am-draw 60s;
 }
 @-webkit-keyframes am-draw {
     0% {
@@ -281,11 +281,11 @@ out[0] = {
         "Trump": -0.1,
         "Clinton": -0.4
     };
-out[37] = {
-        "date": "07-11-2016",
+out[38] = {
+        "date": "08-11-2016",
        "zero": 0,
-        "Trump": 0.69,
-        "Clinton": 0.04,
+        "Trump": 0.82,
+        "Clinton": 0.5,
         "bulletClass": "lastBullet"
     };
 
@@ -344,14 +344,13 @@ var chart = AmCharts.makeChart("chartdiv", {
     lineColor: "#ff0000",
     lineThickness: 1,
     legendValueText: "[[value]]",
-    descriptionField: "townName",
     bullet: "round",
     bulletBorderColor: "#ff0000",
     bulletBorderAlpha: 1,
     bulletBorderThickness: 1,
     labelText: "[[townName2]]",
     labelPosition: "right",
-    balloonText: "[[value]]",
+    balloonText: "Trump: [[value]]",
     showBalloon: true,
     animationPlayed: true,
   },{
@@ -362,7 +361,7 @@ var chart = AmCharts.makeChart("chartdiv", {
     type: "line",
     valueAxis: "a3",
     lineColor: "#0000ff",
-    balloonText: "[[value]]",
+    balloonText: "Clinton: [[value]]",
     lineThickness: 1,
     legendValueText: "[[value]]",
     bullet: "round",
@@ -435,4 +434,3 @@ var chart = AmCharts.makeChart("chartdiv", {
 </body>
 
 </html>
-
